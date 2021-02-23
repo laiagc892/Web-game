@@ -17,28 +17,31 @@ body{
     height: 100%;
     @include flexCenter(column);
     header{
-        height: 200px;
+        width: 960px;
+        height: 150px;
+        text-align: center;
         #logo{
             color: $color_font-light;
             font-family: $font_mono;
             font-size: $size_font-L;
-            margin: 20px;
+            margin: 10px;
         }
         h1{
             color: $color_font-light;
             font-family: $font_standard;
             font-size: $size_font-M;
-            margin: 1em auto;
+            margin: 10px auto;
         }
     }
     main.game-screen{
         margin: 20px 0;
     }
     footer{
-        height: 200px;
-        @include flexCenter(row);
+        width: 960px;
+        height: 150px;
+        @include flexJustAli(flex-start, flex-start);
         button{
-            width: fit-content;
+            width: 80px;
             height: 30px;
             padding: 10px;
             margin: 10px;

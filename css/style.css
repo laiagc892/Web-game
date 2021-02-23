@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 .game-screen {
-  width: 720px;
-  height: 400px;
+  width: 960px;
+  height: 544px;
   border: 10px solid brown;
   background-color: white;
 }
@@ -81,21 +81,23 @@ body {
 }
 
 .content header {
-  height: 200px;
+  width: 960px;
+  height: 150px;
+  text-align: center;
 }
 
 .content header #logo {
   color: white;
   font-family: "Roboto Mono", monospace;
   font-size: 3em;
-  margin: 20px;
+  margin: 10px;
 }
 
 .content header h1 {
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: 2em;
-  margin: 1em auto;
+  margin: 10px auto;
 }
 
 .content main.game-screen {
@@ -103,26 +105,21 @@ body {
 }
 
 .content footer {
-  height: 200px;
+  width: 960px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .content footer button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 80px;
   height: 30px;
   padding: 10px;
   margin: 10px;
