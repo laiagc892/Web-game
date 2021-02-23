@@ -1,0 +1,19 @@
+// COLORS
+$color_background-PC: cadetblue;
+$color_button-light: white;
+$color_button-dark: cadetblue;
+$color_font-light: white;
+$color_font-dark: darkslategray;
+$color_border: brown;
+
+// FONTS
+// Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+$font_standard: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+$font_mono: 'Roboto Mono', monospace;
+
+// SIZES
+$size_font-S: 1em;
+$size_font-M: 2em;
+$size_font-L: 3em;

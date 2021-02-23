@@ -1,0 +1,23 @@
+.game-screen{
+    width: 720px;
+    height: 400px;
+    border: 10px solid $color_border;
+    background-color: white;
+    .commands{
+        @include flexJustAli(space-between, flex-start);
+        button{
+            width: fit-content;
+            height: 30px;
+            padding: 10px;
+            margin: 10px;
+            @include flexCenter(row);
+            font-family: $font_mono;
+            font-size: $size_font-S;
+            font-weight: bold;
+            color: $color_font-light;
+            background-color: $color_button-dark;
+            border: 2px solid $color_border;
+            border-radius: 5px;
+        }
+    }
+}

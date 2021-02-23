@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>backgroundTestRecursive</title>
+    <title>background + jump</title>
     
     <style>
         body {
@@ -12,11 +12,7 @@
             height: 100%;
             width: 100%;
         }
-        
         .game-screen {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
             position: absolute;
             width: 720px;
             height: 400px;
@@ -26,7 +22,6 @@
             transform: translate(-50%, -50%);
             overflow: hidden;
         }
-        
         .background {
             z-index: 100;
             position: absolute;
@@ -34,35 +29,27 @@
             height: 100%;
             transition: 0.1s linear;
         }
-        
-        
         .green {
             background-color: green;
         }
-        
         .red {
             background-color: red;
             left:720px ;
         }
-        
         .yellow {
             background-color: yellow;
             left: 720px;
         }
-        
         .purple {
             background-color: purple;
             left: 720px;
         }
-        
         .buttons {
             position: absolute;
             left: 50%;
             top: 25%;
             transform: translate(-50%, -50%);
-            
         }
-        
     </style>
 </head>
 <body>
@@ -76,8 +63,9 @@
         <button id="pause">Pause</button>
         <button id="start">Start</button>
     </div>
+
+
     <script>
-        
         var pause = false;
         
         var pauseButton = document.querySelector("#pause");
@@ -120,7 +108,7 @@
             background.selector.style.transform = `translateX(${background.transform}%)`
         }
         
-        function backgroundProgression (backgroundOut, backgroundIn, backgroundNext, backgroundIdle ) {
+        function backgroundProgression (backgroundOut, backgroundIn, backgroundNext, backgroundIdle) {
             
             backgroundIn.selector.style.zIndex = 100;
             backgroundIdle.selector.style.zIndex = 1;
@@ -137,8 +125,8 @@
                 } 
             }
             
-            translateBackground(backgroundIn);
             translateBackground(backgroundOut);
+            translateBackground(backgroundIn);
             translateBackground(backgroundNext);
             
         }

@@ -1,3 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+.game-screen {
+  width: 720px;
+  height: 400px;
+  border: 10px solid brown;
+  background-color: white;
+}
+
+.game-screen .commands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.game-screen .commands button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: cadetblue;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +56,95 @@
 }
 
 body {
-  background-color: aquamarine;
+  margin: 0 auto;
+  width: 1024px;
+  height: 100vh;
+  background-color: cadetblue;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content header {
+  height: 200px;
+}
+
+.content header #logo {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-size: 3em;
+  margin: 20px;
+}
+
+.content header h1 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  margin: 1em auto;
+}
+
+.content main.game-screen {
+  margin: 20px 0;
+}
+
+.content footer {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.content footer button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  color: darkslategray;
+  background-color: white;
+  border: 2px solid brown;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */
