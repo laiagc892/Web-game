@@ -1,14 +1,24 @@
 .game-screen{
-    width: 960px;
-    height: 544px;
+    width: 980px;
+    height: 564px;
     border: 10px solid $color_border;
     background-color: white;
+    overflow: hidden;
+    position: relative;
     .commands{
         @include flexJustAli(space-between, flex-start);
+        #menu{
+            left: 0;
+        }
+        #pause{
+            right: 0;
+        }
         button{
-            width: fit-content;
+            position: absolute;
+            top: 0;
+            width: 75px;
             height: 30px;
-            padding: 10px;
+            // padding: 10px;
             margin: 10px;
             @include flexCenter(row);
             font-family: $font_mono;
@@ -16,8 +26,24 @@
             font-weight: bold;
             color: $color_font-light;
             background-color: $color_button-dark;
-            border: 2px solid $color_border;
+            border: 3px solid $color_border;
             border-radius: 5px;
+        }
+    }
+    .game{
+        width: 1920px;
+        height: 544px;
+        @include flexCenter(row);
+        .bg{
+            width: 960px;
+            height: 544px;
+            position: relative;
+        }
+        #bg-first{
+            background-image: url("../img/bg_test/testbg-first.png");
+        }
+        #bg-second{
+            background-image: url("../img/bg_test/testbg-second.png");
         }
     }
 }

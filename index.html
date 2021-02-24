@@ -9,20 +9,31 @@
 </head>
 <body>
     <div class="content">
-            <header>
-                <div id="logo">LogoGameName</div>
-                <h1>Welcome!</h1>
-            </header>
-            <main class="game-screen">
-                <div class="commands">
-                    <button id="menu">Menu</button>
-                    <button id="pause">Pause</button>
-                </div>
-            </main>
-            <footer>
-                <button id="faq">FAQ</button>
-                <button id="about">About</button>
-            </footer>
+        <header>
+            <div id="logo">LogoGameName</div>
+            <h1>Welcome!</h1>
+        </header>
+        <main class="game-screen">
+            <div class="game">
+                <div id="bg-first" class="bg"></div>
+                <div id="bg-second" class="bg"></div>
+            </div>
+            <div class="commands">
+                <button id="menu">Menu</button>
+                <button id="pause">Pause</button>
+            </div>
+        </main>
+        <footer>
+            <button id="faq">FAQ</button>
+            <button id="about">About</button>
+        </footer>
     </div>
+    <script src="./js/gameFunctions.js"></script>
+    <!-- <script>
+        var bgFirst = document.querySelector("#bg-first");
+        bgFirst.style.transform = "translateX(960px)";
+        var bgSecond = document.querySelector("#bg-second");
+        bgSecond.style.transform = "translateX(-1060px)";
+    </script> -->
 </body>
 </html>

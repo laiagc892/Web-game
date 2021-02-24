@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 .game-screen {
-  width: 960px;
-  height: 544px;
+  width: 980px;
+  height: 564px;
   border: 10px solid brown;
   background-color: white;
+  overflow: hidden;
+  position: relative;
 }
 
 .game-screen .commands {
@@ -19,12 +21,19 @@
           align-items: flex-start;
 }
 
+.game-screen .commands #menu {
+  left: 0;
+}
+
+.game-screen .commands #pause {
+  right: 0;
+}
+
 .game-screen .commands button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  position: absolute;
+  top: 0;
+  width: 75px;
   height: 30px;
-  padding: 10px;
   margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,8 +53,40 @@
   font-weight: bold;
   color: white;
   background-color: cadetblue;
-  border: 2px solid brown;
+  border: 3px solid brown;
   border-radius: 5px;
+}
+
+.game-screen .game {
+  width: 1920px;
+  height: 544px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.game-screen .game .bg {
+  width: 960px;
+  height: 544px;
+  position: relative;
+}
+
+.game-screen .game #bg-first {
+  background-image: url("../img/bg_test/testbg-first.png");
+}
+
+.game-screen .game #bg-second {
+  background-image: url("../img/bg_test/testbg-second.png");
 }
 
 * {
@@ -58,7 +99,6 @@
 body {
   margin: 0 auto;
   width: 1024px;
-  height: 100vh;
   background-color: cadetblue;
 }
 
@@ -82,7 +122,7 @@ body {
 
 .content header {
   width: 960px;
-  height: 150px;
+  height: 120px;
   text-align: center;
 }
 
@@ -101,12 +141,12 @@ body {
 }
 
 .content main.game-screen {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .content footer {
   width: 960px;
-  height: 150px;
+  height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,7 +181,7 @@ body {
   font-weight: bold;
   color: darkslategray;
   background-color: white;
-  border: 2px solid brown;
+  border: 3px solid brown;
   border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */
