@@ -5,13 +5,12 @@
 
 setTimeout(bgMovement, 10);
 
-var bgFirst = document.querySelector("#bg-first");
-var bgSecond = document.querySelector("#bg-second");
-var positionFirst = 0;
-var positionSecond = 0;
+var landscape = document.querySelector("#landscape");
+var position = 0;
 var pauseButton = document.querySelector("#pause");
 var pause = false;
 var gameTime = 0;
+var gameEnd = false;
 
 pauseButton.addEventListener("click", () => {
     if (pause) {
@@ -24,7 +23,10 @@ pauseButton.addEventListener("click", () => {
     };
 })
 
-window.addEventListener("blur", () => pause = true);
+window.addEventListener("blur", () => {
+    pause = true;
+    pauseButton.innerHTML = "Play";
+});
 
 function bgMovement() {
     // Cada 8s, cadascun dels bg de 960px ha de passar per la pantalla del joc de (960px).
@@ -32,20 +34,45 @@ function bgMovement() {
     // 960px / 8000ms * 10ms (del setTimeOut) = 1.2px/10ms
     gameTime += 10;
     console.log((gameTime/1000).toFixed(0));
+    let n = 2;
+    position += -1.2;
+    landscape.style.transform = `translateX(${position}px)`;
 
-    positionFirst += -1.2;
-    positionSecond += -1.2;
-    bgFirst.style.transform = `translateX(${positionFirst}px)`;
-    bgSecond.style.transform = `translateX(${positionSecond}px)`;
-    
-    if (Math.round(positionFirst) == -960) {
-        positionFirst = 960;
+     if (gameTime == 16000) {
+        landscape.style.transform = `translateX(0px)`;
+        position = 0;
+        alert("event1");
+        landscape.style.backgroundColor = "grey"
+        landscape.style.backgroundImage = "url('./img/bg_test/testbg-first.png')"
+  
+     }
+    if (gameTime == 32000) {
+        landscape.style.transform = `translateX(0px)`;
+        position = 0;
+        alert("event2");
+        landscape.style.backgroundColor = "gray"
+        landscape.style.backgroundImage = "url('./img/bg_test/testbg-first.png')"
+        
     }
-    if (Math.round(positionSecond) == -1920) {
-        positionSecond = 0;
+    if (gameTime == 48000) {
+        landscape.style.transform = `translateX(0px)`;
+        position = 0;
+        alert("event3");
+        landscape.style.backgroundColor = "lightgrey"
+        landscape.style.backgroundImage = "url('./img/bg_test/testbg-first.png')"
+        
+    }
+    if (gameTime == 64000) {
+        landscape.style.transform = `translateX(0px)`;
+        position = 0;
+        alert("event4");
+        landscape.style.backgroundColor = "white"
+        landscape.style.backgroundImage = "url('./img/bg_test/testbg-first.png')"
+        gameEnd = true
+        
     }
 
-    if (!pause) {
+    if (!pause && !gameEnd) {
         setTimeout(bgMovement, 10);
     }
 }

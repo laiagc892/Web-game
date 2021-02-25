@@ -31,19 +31,15 @@
         }
     }
     .game{
-        width: 1920px;
+        width: 2880px;
         height: 544px;
         @include flexCenter(row);
-        .bg{
-            width: 960px;
+        .landscape{
+            width: 2880px;
             height: 544px;
             position: relative;
-        }
-        #bg-first{
             background-image: url("../img/bg_test/testbg-first.png");
-        }
-        #bg-second{
-            background-image: url("../img/bg_test/testbg-second.png");
+            background-color: black ;
         }
     }
 }
