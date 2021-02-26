@@ -79,6 +79,8 @@ function landscapeMovement() {
     }
 }
 
+var growing = true;
+
 function carMovement() {
     rotation += 5;
     carWheelFront.style.transform = `rotate(${rotation}deg)`;
@@ -86,10 +88,15 @@ function carMovement() {
     if (rotation == 360) {
         rotation = 0;
     }
-
-    bounce += 0.1;
-    carBody.style.transform = `translateY(${bounce}px)`;
-    if (Math.round(bounce) == 3) {
-        bounce = 0;
+    
+    if (Math.round(bounce) == 0) {
+        growing = true;
+    } else if (Math.round(bounce) == 4) {
+        growing = false;
     }
+
+    if (growing) {
+        bounce += 0.15;
+    }else bounce += -0.15;
+    carBody.style.transform = `translateY(${bounce}px)`;
 }
