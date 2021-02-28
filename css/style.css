@@ -10,15 +10,9 @@
 }
 
 .game-screen .commands {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .game-screen .commands #menu {
@@ -35,19 +29,10 @@
   width: 75px;
   height: 30px;
   margin: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   font-family: "Roboto Mono", monospace;
   font-size: 1em;
   font-weight: bold;
@@ -60,19 +45,10 @@
 .game-screen .game {
   width: 2880px;
   height: 544px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .game-screen .game .landscape {
@@ -96,11 +72,7 @@
 }
 
 .game-screen .game .car .car-wheels {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   position: absolute;
   bottom: 0;
@@ -125,11 +97,111 @@
   border: 5px solid brown;
 }
 
+.game-screen .game .events button {
+  width: 80px;
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-self: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: cadetblue;
+  border: 3px solid brown;
+  border-radius: 5px;
+}
+
+.game-screen .game .events p {
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+.game-screen .game .events #event1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.game-screen .game .events #event1 #event1-reset, .game-screen .game .events #event1 #event1-advance, .game-screen .game .events #event1 #event1-message {
+  display: none;
+}
+
+.game-screen .game .events #event1 .dropabble {
+  display: flex;
+  width: 800px;
+  margin: auto;
+}
+
+.game-screen .game .events #event1 .dropabble img {
+  width: 100%;
+  height: 100%;
+}
+
+.game-screen .game .events #event1 .dropabble .initial-position {
+  margin: 5px;
+  width: 200px;
+  height: 150px;
+}
+
+.game-screen .game .events #event1 .dropabble .end-position {
+  margin: 5px;
+  width: 200px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.game-screen .game .events #event3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/eventThree/cliff.svg");
+  overflow: hidden;
+}
+
+.game-screen .game .events #event3 #event3-reset, .game-screen .game .events #event3 #event3-advance, .game-screen .game .events #event3 #event3-message {
+  display: none;
+}
+
+.game-screen .game .events #event3 #progress-bar {
+  margin-top: 5px;
+  width: 80%;
+  height: 30px;
+  background-color: grey;
+}
+
+.game-screen .game .events #event3 #bar {
+  width: 0%;
+  height: 30px;
+  background-color: red;
+}
+
+.game-screen .game .events #event3 .car {
+  left: 20px;
+  bottom: 160px;
+}
+
+.game-screen .game .events #event3 #event3-car-wheel-front {
+  right: 27px;
+}
+
+.game-screen .game .events #event3 #event3-car-wheel-back {
+  left: 15.5px;
+}
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -141,19 +213,10 @@ body {
 .content {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .content header {
@@ -183,15 +246,9 @@ body {
 .content footer {
   width: 960px;
   height: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .content footer button {
@@ -199,19 +256,10 @@ body {
   height: 30px;
   padding: 10px;
   margin: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   font-family: "Roboto Mono", monospace;
   font-size: 1em;
   font-weight: bold;

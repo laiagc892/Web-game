@@ -22,9 +22,51 @@
                     <img class="car-wheels" id="car-wheel-back" src="./img/car/car_wheel.png" alt="car wheel">
                 </div>
                 <div class="events">
-                    <div class="event" id="event1"></div>
+                    <div class="event" id="event1">
+                        <h2>¿Que modo de energía es mejor para el medio ambiente?</h1>
+                        <div class="dropabble">
+                            <div class="initial-position" id="start-one">
+                                <img src="./img/eventOne/diesel.svg" id="diesel" draggable="true" ondragstart="drag(event)" name="diesel" alt="">
+                            </div>
+                            <div class="initial-position" id="start-two">
+                                <img src="./img/eventOne/gasoline.svg" id="gasoline" draggable="true" ondragstart="drag(event)" name="gasoline" alt="">
+                            </div>
+                            <div class="initial-position" id="start-three">
+                                <img src="./img/eventOne/electric.svg" id="electric" draggable="true" ondragstart="drag(event)" name="electric" alt="">
+                            </div>
+                            <div class="initial-position" id="start-four">
+                                <img src="./img/eventOne/gas.svg" id="gas" draggable="true" ondragstart="drag(event)" name="gas" alt="">
+                            </div>
+                        </div>
+                        <p>Ordenalos abajo de mejor a peor.</p>
+                        <div class="dropabble">
+                            <div class="end-position" id="end-one" ondrop="drop(event)" ondragover="allowDrop(event)" name="electric"></div>
+                            <div class="end-position" id="end-two" ondrop="drop(event)" ondragover="allowDrop(event)" name="gas"></div>
+                            <div class="end-position" id="end-three" ondrop="drop(event)" ondragover="allowDrop(event)" name="diesel"></div>
+                            <div class="end-position" id="end-four" ondrop="drop(event)" ondragover="allowDrop(event)" name="gasoline"></div>
+                        </div>
+
+                        <button id="event1-check">Check</button>
+                        <p id="event1-message">Wrong Answer! 2 attempts left</p>
+                        <button id="event1-reset">Reset</button>
+                        <button id="event1-advance">Advance</button>
+                    </div>
                     <div class="event" id="event2"></div>
-                    <div class="event" id="event3"></div>
+                    <div class="event" id="event3">
+                        <h2>¡Presiona espacio para llenar la barra y saltar!</h2>
+                        <div id="progress-bar">
+                            <div id="bar"></div>
+                        </div>
+                        <p id="event3-message">!Prueba de nuevo!</p>
+                        <button id="event3-reset">Reset</button>
+                        <button id="event3-advance">Advance</button>
+
+                        <div class="car" id="event3-car">
+                            <img id="event3-car-body" src="./img/car/car_body.png" alt="car body">
+                            <img class="car-wheels" id="event3-car-wheel-front" src="./img/car/car_wheel.png" alt="car wheel">
+                            <img class="car-wheels" id="event3-car-wheel-back" src="./img/car/car_wheel.png" alt="car wheel">
+                        </div>
+                    </div>
                     <div class="event" id="event4"></div>
                 </div>
             </div>
