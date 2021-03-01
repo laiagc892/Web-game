@@ -34,10 +34,15 @@
             <label for="ar">Ja n'utilitzo de poc contaminant (o públic).</label>
 
             <h2>4) Vols afegir algun comentari sobre aquest tema?</h2>
-            <textarea name="question4" id="" cols="30" rows="10"></textarea>
+            <textarea name="question4" id="a4" cols="30" rows="10"></textarea>
         </form>
 
-        <button>Envia!</button>
+        <button id="send">Envia!</button>
+        <p id="error"></p>
+        <button id="get-results">Veure els resultats.</button>
+        <ul id="results"></ul>
     </div>
+
+    <script src="./js/formFirebase.js"></script>
 </body>
 </html>

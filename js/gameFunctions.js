@@ -70,7 +70,7 @@ function landscapeMovement() {
 var growing = true;
 
 function carMovement() {
-    rotation += 8;
+    rotation += 6;
     carWheelFront.style.transform = `rotate(${rotation}deg)`;
     carWheelBack.style.transform = `rotate(${rotation}deg)`;
     if (rotation == 360) {
