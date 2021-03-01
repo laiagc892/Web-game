@@ -207,47 +207,117 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .game-screen .game .events #event4 .car {
   left: 50%;
   transform: translateX(-50%);
   bottom: 20px;
+  z-index: 5;
+  transition: 2s linear;
 }
 
 .game-screen .game .events #event4 #event4-car-wheel-front {
   right: 27px;
+  transition: 2s linear;
 }
 
 .game-screen .game .events #event4 #event4-car-wheel-back {
   left: 15.5px;
+  transition: 2s linear;
 }
 
 .game-screen .game .events #event4 .energy-change {
   height: 250px;
   width: 80%;
-  border: 1px solid black;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.game-screen .game .events #event4 .energy-change img {
+.game-screen .game .events #event4 .energy-change .image-container {
   height: 100%;
   width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.game-screen .game .events #event4 .energy-change h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+.game-screen .game .events #event4 .energy-change img {
+  width: 100%;
+  height: 100%;
+  background-color: wheat;
 }
 
 .game-screen .game .events #event4 .energy-change .current-energy {
-  height: 110px;
-  width: 30%;
+  position: relative;
+  padding: 5px 0;
+  height: 95px;
+  width: 20%;
   border: 1px solid black;
 }
 
 .game-screen .game .events #event4 .energy-change .energy-options {
   display: flex;
   flex-direction: row;
-  height: 110px;
+  height: 105px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options .energy-option {
+  position: relative;
+  padding: 5px 0;
+  height: 95px;
+  width: 20%;
+  border: 1px solid black;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options .energy-option #h3-diesel {
+  color: #d4aa00ff;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options .energy-option #h3-gasoline {
+  color: #0000ffff;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options .energy-option #h3-gas {
+  color: #c83737ff;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options .energy-option #h3-electric {
+  color: #008000ff;
+}
+
+.game-screen .game .events #event4 #event4-finish {
+  position: relative;
+  top: 50px;
+  z-index: 1;
+  width: 230px;
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-self: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: cadetblue;
+  border: 3px solid brown;
+  border-radius: 5px;
 }
 
 * {
