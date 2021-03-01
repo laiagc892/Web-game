@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auxForm</title>
+</head>
+<body>
+    <div class="questionari">
+        <form>
+            <h2>1) És necessària una evolució en els combustibles dels transports cap a una energia més ecològica per reduïr la contaminació?</h2>
+            <input type="radio" id="yes" name="question1" value="si">
+            <label for="yes">Sí!</label>
+            <input type="radio" id="no" name="question1" value="no">
+            <label for="no">No.</label>
+            <input type="radio" id="dc" name="question1" value="dontcare">
+            <label for="dc">M'és igual...</label>
+            
+            <h2>2) Et mous amb un transport eco, de baixa contaminació o públic?</h2>
+            <input type="radio" id="al" name="question2" value="always">
+            <label for="al">Sí, pràcticament sempre.</label>
+            <input type="radio" id="st" name="question2" value="sometimes">
+            <label for="st"> A vegades.</label>
+            <input type="radio" id="ne" name="question2" value="never">
+            <label for="ne">No, quasibé mai</label>
+
+            <h2>3) Has pensat en millorar la teva movilitat amb un transport menys contaminant?</h2>
+            <input type="radio" id="of" name="question3" value="often">
+            <label for="of">Sovint... Tot i que encara no l'he canviat.</label>
+            <input type="radio" id="yt" name="question3" value="yet">
+            <label for="yt">No m'ho he plantejat encara, la veritat...</label>
+            <input type="radio" id="ar" name="question3" value="already">
+            <label for="ar">Ja n'utilitzo de poc contaminant (o públic).</label>
+
+            <h2>4) Vols afegir algun comentari sobre aquest tema?</h2>
+            <textarea name="question4" id="" cols="30" rows="10"></textarea>
+        </form>
+
+        <button>Envia!</button>
+    </div>
+</body>
+</html>

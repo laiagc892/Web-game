@@ -1,3 +1,19 @@
+b1.addEventListener("click", () => {
+    // Declarem la variable prnom dins la funció, ja que si ho fessim abans del "click", no agafaria el pronom que ha escollit l'usuari.
+    var prnom = document.querySelector("input[name=pronom]:checked");       // Podem no posar input si amb el name ja troba l'element q volem.
+    // input és l'element (etiqueta) i [name=nameOfRadio] és el seu atribut. Podem referir-nos a qualsevol dels atributs. Classes i id es redueixen a "." i "#" + el nom corresponent.
+    p.innerHTML = `Una càlida salutació per ${prnom.value} ${nom.value}! `
+});     // detecta el click al botó i executa la funció
+
+
+
+
+
+
+
+
+
+
 const database = "https://moveco-game-default-rtdb.firebaseio.com/";
 
 
