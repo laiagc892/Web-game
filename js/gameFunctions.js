@@ -36,8 +36,6 @@ window.addEventListener("blur", () => {
 
 // eventFour();
 
-eventOne();
-
 function landscapeMovement() {
     // Cada 8s, cadascun dels bg de 960px ha de passar per la pantalla del joc de (960px).
     // 960px / 8000ms = 0.12px/ms
