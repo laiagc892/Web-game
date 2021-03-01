@@ -97,7 +97,7 @@
   border: 5px solid brown;
 }
 
-.game-screen .game .events button {
+.game-screen .game .events .event button {
   width: 80px;
   height: 30px;
   padding: 10px;
@@ -116,13 +116,17 @@
   border-radius: 5px;
 }
 
-.game-screen .game .events p {
+.game-screen .game .events .event p {
   height: 30px;
   padding: 10px;
   margin: 10px;
   text-align: center;
   align-items: center;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto", sans-serif;
+}
+
+.game-screen .game .events .event h2 {
+  font-family: "Roboto", sans-serif;
 }
 
 .game-screen .game .events #event1 {

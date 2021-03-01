@@ -73,33 +73,40 @@
                 top: 57px;
                 background-color: $color_event-bg;
                 border: 5px solid $color_border;
+
+                button{
+                    width: 80px;
+                    height: 30px;
+                    padding: 10px;
+                    margin: 10px;
+                    @include flexCenter(column);
+                    justify-self: center;
+                    font-family: $font_mono;
+                    font-size: $size_font-S;
+                    font-weight: bold;
+                    color: $color_font-light;
+                    background-color: $color_button-dark;
+                    border: 3px solid $color_border;
+                    border-radius: 5px;
+                }
+    
+                p {
+                    height: 30px;
+                    padding: 10px;
+                    margin: 10px;
+                    text-align: center;
+                    align-items: center;
+                    $size_font-S: 1em;
+                    font-family: $font_standard;
+                    
+                }
+    
+                h2 {
+                    font-family: $font_standard;
+                    $size_font-M: 2em;
+                }
             }
 
-            button{
-                width: 80px;
-                height: 30px;
-                padding: 10px;
-                margin: 10px;
-                @include flexCenter(column);
-                justify-self: center;
-                font-family: $font_mono;
-                font-size: $size_font-S;
-                font-weight: bold;
-                color: $color_font-light;
-                background-color: $color_button-dark;
-                border: 3px solid $color_border;
-                border-radius: 5px;
-            }
-
-            p {
-                height: 30px;
-                padding: 10px;
-                margin: 10px;
-                text-align: center;
-                align-items: center;
-                font-family: $font_mono;
-                
-            }
 
             #event1 {
                 display: flex;
@@ -170,6 +177,13 @@
                 #event3-car-wheel-back{
                     left: 15.5px;
                 }
+            }
+
+            #event4 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
             }
         }
     }

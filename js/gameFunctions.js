@@ -34,8 +34,9 @@ window.addEventListener("blur", () => {
     pauseButton.innerHTML = "Play";
 });
 
-// eventOne();
-setTimeout(landscapeMovement, 10);
+// eventFour();
+
+eventOne();
 
 function landscapeMovement() {
     // Cada 8s, cadascun dels bg de 960px ha de passar per la pantalla del joc de (960px).
@@ -63,7 +64,8 @@ function landscapeMovement() {
     }
     if (gameTime == 48000) {
         position = 0;
-        alert("event4");
+        pause = true;
+        eventFour();
         landscape.style.backgroundColor = "white";
         landscape.style.backgroundImage = "url('./img/bg_test/testbg-first.png')";
     }
@@ -253,6 +255,7 @@ function eventThree() {
 
   advanceButton.addEventListener("click", () => {
     document.querySelector("#event3").style.visibility = "hidden"
+    pause = false;
     setTimeout(landscapeMovement, 10);
 
   })
@@ -268,12 +271,13 @@ function eventThree() {
     wheelFront.style.transition = "0s";
     wheelBack.style.transition = "0s";
     car.style.transition = "0s";
-    body.style.transform = "translate(0) rotate(0)";
-    wheelFront.style.transform = "translate(0) rotate(0)";
-    wheelBack.style.transform = "translate(0) rotate(0)";
-    car.style.transform = "translate(0) rotate(0)";
+    body.style.transform = "";
+    wheelFront.style.transform = "";
+    wheelBack.style.transform = "";
+    car.style.transform = "";
     barLock = false;
     document.getElementById("bar").style.width = "0%";
+    document.getElementById("bar").style.backgroundColor = "red";
     jumpPercent = 0;
 
 
@@ -302,8 +306,7 @@ function eventThree() {
     let rotationDegOne = 360;
     let rotationDegTwo = 650;
     let rotationDegThree = 1080;
-  
-
+    
     car.style.transition = `1s linear`;
     wheelFront.style.transition = `1s linear`;
     wheelBack.style.transition = `1s linear`;
@@ -365,3 +368,9 @@ function eventThree() {
   }
 }
 // end of functions for event three jump
+
+// start of functions for event four upgrade
+function eventFour() {
+  document.querySelector("#event4").style.visibility = "visible"
+}
+// end of functions for event four upgrade
