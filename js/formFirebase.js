@@ -1,5 +1,4 @@
 function feedbackForm() {
-    pauseButton.disabled = "true";
     document.querySelector("#feedback").style.visibility = "visible";
 }
 

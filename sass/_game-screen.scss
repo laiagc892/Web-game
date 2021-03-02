@@ -103,21 +103,21 @@
                 }
             }
             #intro {
-                visibility: visible;
+                // visibility: visible;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 padding: 60px;
                 padding-top: 30px;
                 h1{
-                    color: $color_font-light;
+                    color: $color_button-dark;
                     font-family: $font_standard;
                     font-size: $size_font-M;
-                    margin: 10px auto;
+                    // margin: 10px auto;
                 }
                 p {
                     text-align: left;
-                    font-family: $font_mono ;
+                    font-family: $font_mono;
                 }
             }
             #event1 {
@@ -296,6 +296,13 @@
                     background-color: $color_button-dark;
                     border: 3px solid $color_border;
                     border-radius: 5px;
+                }
+            }
+            #feedback{
+                @include flexCenter(column);
+                overflow-y: scroll;
+                #form{
+                    margin: 10px;
                 }
             }
         }

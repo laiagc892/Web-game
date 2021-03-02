@@ -129,7 +129,7 @@
                     </div>
                     <!-- ----------------------- FEEDBACK ----------------------- -->
                     <div class="event" id="feedback">
-                        <form>
+                        <div id="form">
                             <!-- ----------------------- Q1 ----------------------- -->
                             <h3>{{ q1.question }}</h3>
                             <div class="options">
@@ -175,13 +175,12 @@
                             <!-- ----------------------- Q4 ----------------------- -->
                             <h3>{{ q4.question }}</h3>
                             <textarea name="question4" id="a4" cols="30" rows="10"></textarea>
-                        </form>
-                        
+                        </div>
+
                         <button id="send">Envia!</button>
                         <p id="error"></p>
                         <button id="get-results">Veure els resultats.</button>
                         
-                        <ul id="stats-results"></ul>
                         <!-- <h3>1) És necessària una evolució en els combustibles dels transports cap a una energia més ecològica per reduïr la contaminació?</h3>
                         <div id="q1a1"></div>
                         <div id="q1a2"></div>

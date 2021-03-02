@@ -3,6 +3,8 @@
 - Funció recursiva que si no es clica pausa, crida el setTimeOut() perquè segueixi movent-se (cridant la funció).
 */
 
+feedbackForm()
+
 // Landscape movement:
 var landscape = document.querySelector("#landscape");
 var position = 0;
@@ -17,6 +19,7 @@ var carWheelFront = document.querySelector("#car-wheel-front");
 var carWheelBack = document.querySelector("#car-wheel-back");
 var rotation = 0;
 var bounce = 0;
+// Events
 var inEvent = true;
 
 pauseButton.disabled = "true";
@@ -36,8 +39,7 @@ window.addEventListener("blur", () => {
     if (!inEvent) {
         pause = true;
         pauseButton.innerHTML = "Play";
-    }    
-    
+    }
 });
 
 
