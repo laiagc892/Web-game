@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gameName</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -55,7 +56,7 @@
                     <!-- ----------------------- 2 EV. ----------------------- -->
                     <!-- <div class="event" id="event2">
                     </div> -->
-                    <!-- 3 EV. -->
+                    <!-- ----------------------- 3 EV. ----------------------- -->
                     <div class="event" id="event3">
                         <h2>¡Presiona espacio para llenar la barra y saltar!</h2>
                         <div id="progress-bar">
@@ -64,7 +65,6 @@
                         <p id="event3-message">!Prueba de nuevo!</p>
                         <button id="event3-reset">Reset</button>
                         <button id="event3-advance">Advance</button>
-
                         <div class="car" id="event3-car">
                             <img id="event3-car-body" src="./img/car/car_body.png" alt="car body">
                             <img class="car-wheels" id="event3-car-wheel-front" src="./img/car/car_wheel.png" alt="car wheel">
@@ -115,11 +115,72 @@
                             <img class="car-wheels" id="event4-car-wheel-front" src="./img/car/car_wheel.png" alt="car wheel">
                             <img class="car-wheels" id="event4-car-wheel-back" src="./img/car/car_wheel.png" alt="car wheel">
                         </div>
-
                         <button id="event4-finish">¡Has ecolucionat!</button>
                     </div>
-                    <!-- ----------------------- 4 EV. ----------------------- -->
-                    <div class="event" id="feedback"></div>
+                    <!-- ----------------------- FEEDBACK ----------------------- -->
+                    <div class="event" id="feedback">
+                        <form>
+                            <!-- ----------------------- Q1 ----------------------- -->
+                            <h3>{{ q1.question }}</h3>
+                            <div class="options">
+                                <input type="radio" id="yes" name="question1" value="si">
+                                <label for="yes">Sí!</label>
+                            </div>
+                            <div class="options">
+                                <input type="radio" id="no" name="question1" value="no">
+                                <label for="no">No.</label>
+                            </div>
+                            <div class="options">
+                                <input type="radio" id="dc" name="question1" value="dontcare">
+                                <label for="dc">M'és igual...</label>
+                            </div>
+                            <!-- ----------------------- Q2 ----------------------- -->
+                            <h3>{{ q2.question }}</h3>
+                            <div class="options">
+                                <input type="radio" id="al" name="question2" value="always">
+                                <label for="al">Sí, pràcticament sempre.</label>
+                            </div>
+                            <div class="options">
+                                <input type="radio" id="st" name="question2" value="sometimes">
+                                <label for="st"> A vegades.</label>
+                            </div>
+                            <div class="options">
+                                <input type="radio" id="ne" name="question2" value="never">
+                                <label for="ne">No, quasibé mai</label>
+                            </div>
+                            <!-- ----------------------- Q3 ----------------------- -->
+                            <h3>{{ q3.question }}</h3>
+                            <div class="options">
+                                <input type="radio" id="ar" name="question3" value="already">
+                                <label for="ar">Ja n'utilitzo de poc contaminant (o públic).</label>
+                            </div>
+                            <div class="options">
+                                <input type="radio" id="of" name="question3" value="often">
+                                <label for="of">Sovint... Tot i que encara no l'he canviat.</label>
+                            </div>
+                            <div class="options">
+                                <input type="radio" id="yt" name="question3" value="yet">
+                                <label for="yt">No m'ho he plantejat encara, la veritat...</label>
+                            </div>
+                            <!-- ----------------------- Q4 ----------------------- -->
+                            <h3>{{ q4.question }}</h3>
+                            <textarea name="question4" id="a4" cols="30" rows="10"></textarea>
+                        </form>
+                        
+                        <button id="send">Envia!</button>
+                        <p id="error"></p>
+                        <button id="get-results">Veure els resultats.</button>
+                        
+                        <ul id="stats-results"></ul>
+                        <!-- <h3>1) És necessària una evolució en els combustibles dels transports cap a una energia més ecològica per reduïr la contaminació?</h3>
+                        <div id="q1a1"></div>
+                        <div id="q1a2"></div>
+                        <div id="q1a3"></div> -->
+                        <!-- <h3>2) Et mous amb un transport eco, de baixa contaminació o públic?</h3>
+                        <h3>3) Has pensat en millorar la teva movilitat amb un transport menys contaminant?</h3>
+                        <h3>4) Comentaris destacats</h3> -->
+                        <ul id="results"></ul>
+                    </div>
                 </div>
             </div>
             <!-- ----------------------- COMMANDS ----------------------- -->
@@ -136,7 +197,7 @@
     <script src="./js/event-1.js"></script>
     <script src="./js/event-3.js"></script>
     <script src="./js/event-4.js"></script>
-    <!-- <script src="./js/formFirebase.js"></script> -->
+    <script src="./js/formFirebase.js"></script>
     <script src="./js/gameFunctions.js"></script>
 </body>
 </html>

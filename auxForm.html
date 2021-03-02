@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>auxForm</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
     <div id="feedback">
         <form>
             <!-- ----------------------- Q1 ----------------------- -->
-            <h3>{{ question1 }}</h3>
+            <h3>{{ q1.question }}</h3>
             <div class="options">
                 <input type="radio" id="yes" name="question1" value="si">
                 <label for="yes">Sí!</label>
@@ -24,7 +25,7 @@
                 <label for="dc">M'és igual...</label>
             </div>
             <!-- ----------------------- Q2 ----------------------- -->
-            <h3>{{ question2 }}</h3>
+            <h3>{{ q2.question }}</h3>
             <div class="options">
                 <input type="radio" id="al" name="question2" value="always">
                 <label for="al">Sí, pràcticament sempre.</label>
@@ -38,7 +39,7 @@
                 <label for="ne">No, quasibé mai</label>
             </div>
             <!-- ----------------------- Q3 ----------------------- -->
-            <h3>{{ question3 }}</h3>
+            <h3>{{ q3.question }}</h3>
             <div class="options">
                 <input type="radio" id="ar" name="question3" value="already">
                 <label for="ar">Ja n'utilitzo de poc contaminant (o públic).</label>
@@ -52,7 +53,7 @@
                 <label for="yt">No m'ho he plantejat encara, la veritat...</label>
             </div>
             <!-- ----------------------- Q4 ----------------------- -->
-            <h3>{{ question4 }}</h3>
+            <h3>{{ q4.question }}</h3>
             <textarea name="question4" id="a4" cols="30" rows="10"></textarea>
         </form>
         
@@ -68,7 +69,6 @@
         <!-- <h3>2) Et mous amb un transport eco, de baixa contaminació o públic?</h3>
         <h3>3) Has pensat en millorar la teva movilitat amb un transport menys contaminant?</h3>
         <h3>4) Comentaris destacats</h3> -->
-
         <ul id="results"></ul>
     </div>
     

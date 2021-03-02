@@ -73,7 +73,6 @@
                 top: 57px;
                 background-color: $color_event-bg;
                 border: 5px solid $color_border;
-
                 button{
                     width: 80px;
                     height: 30px;
@@ -89,7 +88,6 @@
                     border: 3px solid $color_border;
                     border-radius: 5px;
                 }
-    
                 p {
                     height: 30px;
                     padding: 10px;
@@ -100,20 +98,16 @@
                     font-family: $font_standard;
                     
                 }
-    
                 h2 {
                     font-family: $font_standard;
                     $size_font-M: 2em;
                 }
             }
-
-
             #event1 {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 text-align: center;
-
                 #event1-reset ,#event1-advance, #event1-message {
                     display: none;
                 }
@@ -127,7 +121,6 @@
                         height: 100% ;
                         
                     }
-
                     .initial-position {
                         margin: 5px;
                         width: 200px;
@@ -142,30 +135,25 @@
                     }
                 }
             }
-
             #event3 {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 background-image: url("../img/eventThree/cliff.svg");
                 overflow: hidden;
-
                 #event3-reset ,#event3-advance, #event3-message {
                     display: none;
                 }
-
                 #progress-bar {
                     margin-top: 5px;
                     width: 80%;
                     height: 30px;
                     background-color: grey;
                 }
-              
                 #bar {
-                  width: 0%;
-                  height: 30px;
-                  background-color: red;
-                  
+                    width: 0%;
+                    height: 30px;
+                    background-color: red;
                 }
                 .car{
                     left: 20px;
@@ -178,14 +166,12 @@
                     left: 15.5px;
                 }
             }
-
             #event4 {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
                 overflow: hidden;
-
                 .car {
                     left: 50%;
                     transform: translateX(-50%);
@@ -193,7 +179,6 @@
                     z-index: 5;
                     transition: 2s linear;
                 }
-
                 #event4-car-wheel-front{
                     right: 27px;
                     transition: 2s linear;
@@ -202,14 +187,12 @@
                     left: 15.5px;
                     transition: 2s linear;
                 }
-
                 .energy-change {
                     height: 250px;
                     width: 80%;
                     display: flex;
                     align-items: center;
                     flex-direction: column;
-
                     .image-container {
                         height: 100%;
                         width: 100%;
@@ -217,7 +200,6 @@
                         z-index: 10;
                         
                     }
-
                     h3 {
                         position: absolute;
                         top: 50%;
@@ -226,14 +208,12 @@
                         z-index: 0;
                         font-family: $font_mono;
                     }
-
                     img {
                         width: 100%;
                         height: 100%;
                         background-color:$color_event-bg ;
                         
                     }
-
                     .current-energy {
                         position: relative;
                         padding: 5px 0;
@@ -241,42 +221,33 @@
                         width: 20%;
                         border: 1px solid black;
                     }
-
                     .energy-options {
                         display: flex;
                         flex-direction: row;
                         height: 105px;
                         width: 100%;
                         justify-content: space-between;
-
                         .energy-option {
                             position: relative;
                             padding: 5px 0;
                             height: 95px;
                             width: 20%;
                             border: 1px solid black;
-                 
                             #h3-diesel {
                                 color: #d4aa00ff;
                             }
-
                             #h3-gasoline {
                                 color: #0000ffff;
                             }
-
                             #h3-gas {
                                 color: #c83737ff;
                             }
-
                             #h3-electric {
                                 color: #008000ff;
                             }
-
                         }
                     }
-    
                 }
-
                 #event4-finish{
                     position: relative;
                     top: 50px;
@@ -295,11 +266,6 @@
                     border: 3px solid $color_border;
                     border-radius: 5px;
                 }
-
-            
-
-                
- 
             }
         }
     }

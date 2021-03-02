@@ -1,3 +1,10 @@
+gameEnd.addEventListener("click", feedbackForm);
+
+function feedbackForm() {
+    pauseButton.disabled = "true";
+    document.querySelector("#feedback").style.visibility = "visible";
+}
+
 var sendButton = document.querySelector("#send");
 var errorMessage = document.querySelector("#error");
 var resultsButton = document.querySelector("#get-results");
@@ -37,7 +44,7 @@ function postA(a1, a2, a3, a4) {                                                
         body: JSON.stringify({  q1: `${a1}`,
                                 q2: `${a2}`,
                                 q3: `${a3}`,
-                                comment: `${a4}`,
+                                q4: `${a4}`,
                                 date: Date.now()
         })
     })
@@ -55,63 +62,61 @@ function getA() {                                                               
     .then(res => res.json())
     .then(res => {
         var results = res;
-        console.log(results);
         
         // TODO Buidar els results abans de reescriure'ls:
         resultsShowed.innerHTML = "";                                               // Buida el contingut abans de reescriure'l, perquè no escrigui més d'una vegada el mateix
         for (idR in results) {
             // TODO Gestionar com es visualitzen els results:
-            // resultsShowed.innerHTML += `<answer-statistics v-for="item of toDoTodayAgain" v-bind:key="item.id" v-bind:who="item.who" v-bind:what="item.what" v-bind:how="item.how"></answer-statistics>`
-            // resultsShowed.innerHTML +=  `<li>Resposta:
-            //                                 <p>Q1: ${results[idR].q1}</p>
-            //                                 <p>Q2: ${results[idR].q2}</p>
-            //                                 <p>Q3: ${results[idR].q3}</p>
-            //                                 <p>Comment: ${results[idR].comment}</p>
-            //                             </li>`
+
+            if (results[idR].q1 == "si") {
+                feedback.q1.answers[0] ++
+            } else if (results[idR].q1 == "no") {
+                feedback.q1.answers[1] ++
+            } else feedback.q1.answers[2] ++
+
+            if (results[idR].q2 == "always") {
+                feedback.q2.answers[0] ++
+            } else if (results[idR].q2 == "sometimes") {
+                feedback.q2.answers[1] ++
+            } else feedback.q2.answers[2] ++
+
+            if (results[idR].q3 == "already") {
+                feedback.q3.answers[0] ++
+            } else if (results[idR].q3 == "often") {
+                feedback.q3.answers[1] ++
+            } else feedback.q3.answers[2] ++
+
+            if (results[idR].q4) {
+                feedback.q4.comments.push(results[idR].q4)
+            }
         }
+        console.log(feedback.q1.answers, feedback.q2.answers, feedback.q3.answers, feedback.q4.comments);
+
+
     });
 }
 
+getA()
 
-// Vue.component("answer-statistics", {
-//     props: ["id", "who", "what", "how"],
-//     template: `<li>
-//         <h3>{{ questionN }}</h3>
-//         <div id="q1a1"></div>
-//         <div id="q1a2"></div>
-//         <div id="q1a3"></div>
-//     També avui {{ who }} té intenció {{ what }} {{ how }}</li>`
-// })
 
 var feedback = new Vue({
     el: "#feedback",
     data: {
-        question1: "1) És necessària una evolució en els combustibles dels transports cap a una energia més ecològica per reduïr la contaminació?",
-        question2: "2) Et mous amb un transport eco, de baixa contaminació o públic?",
-        question3: "3) Has pensat en millorar la teva movilitat amb un transport menys contaminant?",
-        question4: "4) Vols afegir algun comentari sobre aquest tema?",
-        // toDoTodayAgain: [    // array d'objectes
-        //     {
-        //         id: 0,
-        //         questionN: "",
-        //         who: "la Laia",
-        //         what: "de jugar al Valorant",
-        //         how: "amb noobs."
-        //     },
-        //     {
-        //         id: 1,
-        //         questionN: "",
-        //         who: "l'Omar",
-        //         what: "d'ensenyar Vue",
-        //         how: "als preciosos alumnes."
-        //     },
-        //     {
-        //         id: 2,
-        //         questionN: "",
-        //         who: "l'alumnat",
-        //         what: "d'avançar el Projecte final",
-        //         how: "amb i-l·lusió!"
-        //     }
-        // ]
+        q1: {
+            question: "1) És necessària una evolució en els combustibles dels transports cap a una energia més ecològica per reduïr la contaminació?",
+            answers: [0, 0, 0]
+        },
+        q2: {
+            question: "2) Et mous amb un transport eco, de baixa contaminació o públic?",
+            answers: [0, 0, 0]
+        },
+        q3: {
+            question: "3) Has pensat en millorar la teva movilitat amb un transport menys contaminant?",
+            answers: [0, 0, 0]
+        },
+        q4: {
+            question: "4) Vols afegir algun comentari sobre aquest tema?",
+            comments: []
+        },
     }
 })
