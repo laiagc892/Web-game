@@ -176,19 +176,21 @@
                             <h3>{{ q4.question }}</h3>
                             <textarea name="question4" id="a4" cols="30" rows="10"></textarea>
                         </div>
-
-                        <button id="send">Envia!</button>
+                        <button @click="boto" id="send">Envia!</button>
                         <p id="error"></p>
-                        <button id="get-results">Veure els resultats.</button>
-                        
-                        <!-- <h3>1) És necessària una evolució en els combustibles dels transports cap a una energia més ecològica per reduïr la contaminació?</h3>
-                        <div id="q1a1"></div>
-                        <div id="q1a2"></div>
-                        <div id="q1a3"></div> -->
-                        <!-- <h3>2) Et mous amb un transport eco, de baixa contaminació o públic?</h3>
-                        <h3>3) Has pensat en millorar la teva movilitat amb un transport menys contaminant?</h3>
-                        <h3>4) Comentaris destacats</h3> -->
-                        <ul id="results"></ul>
+                        <div id="results">
+                            <p>Resultats</p>
+                            <!-- <p v-for="stat of q1.answers">{{ stat }}</p>
+                            <p v-for="stat of q2.answers">{{ stat }}</p>
+                            <p v-for="stat of q3.answers">{{ stat }}</p> -->
+                            <!-- <h3>1) És necessària una evolució en els combustibles dels transports cap a una energia més ecològica per reduïr la contaminació?</h3>
+                            <div id="q1a1"></div>
+                            <div id="q1a2"></div>
+                            <div id="q1a3"></div> -->
+                            <!-- <h3>2) Et mous amb un transport eco, de baixa contaminació o públic?</h3>
+                            <h3>3) Has pensat en millorar la teva movilitat amb un transport menys contaminant?</h3>
+                            <h3>4) Comentaris destacats</h3> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -203,10 +205,10 @@
             <button id="about">About</button>
         </footer>
     </div>
+    <script src="./js/formFirebase.js"></script>
     <script src="./js/event-1.js"></script>
     <script src="./js/event-3.js"></script>
     <script src="./js/event-4.js"></script>
-    <script src="./js/formFirebase.js"></script>
     <script src="./js/gameFunctions.js"></script>
 </body>
 </html>

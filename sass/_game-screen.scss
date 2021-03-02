@@ -305,8 +305,7 @@
                 }
             }
             #feedback{
-                @include flexCenter(column);
-                overflow-y: scroll;
+                overflow: auto;
                 #form{
                     margin: 10px;
                 }
