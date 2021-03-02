@@ -17,11 +17,14 @@ var carWheelFront = document.querySelector("#car-wheel-front");
 var carWheelBack = document.querySelector("#car-wheel-back");
 var rotation = 0;
 var bounce = 0;
+var inEvent = true;
+
+pauseButton.disabled = "true";
 
 pauseButton.addEventListener("click", () => {
     if (pause) {
         pause = false;
-        pauseButton.innerHTML = "Pause";
+        pauseButton.innerHTML = "Pausa";
         landscapeMovement();
     } else {
         pause = true;
@@ -30,12 +33,20 @@ pauseButton.addEventListener("click", () => {
 })
 
 window.addEventListener("blur", () => {
-    pause = true;
-    pauseButton.innerHTML = "Play";
+    if (!inEvent) {
+        pause = true;
+        pauseButton.innerHTML = "Play";
+    }    
+    
 });
 
 
-eventFour();
+var gameStart =document.querySelector("#game-start");
+
+gameStart.addEventListener("click", () => {
+    document.querySelector("#intro").style.visibility = "hidden";
+    eventOne();
+})
 
 function landscapeMovement() {
     // Cada 8s, cadascun dels bg de 960px ha de passar per la pantalla del joc de (960px).

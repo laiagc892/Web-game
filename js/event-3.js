@@ -6,6 +6,7 @@ function eventThree() {
     var jumpPercent = 0;
     var pressed = false
     var barLock = false;
+    inEvent = true;
     function moveBar() {
         let progressBar = document.getElementById("bar");
         if (jumpPercent == 100) {
@@ -41,28 +42,28 @@ function eventThree() {
             if (jumpPercent < 31) {
                 event3AnimationOne();
                 setTimeout(() => {
-                    message.innerHTML = "¡Hay que acelerar mas! Intenta de nuevo";
+                    message.innerHTML = "Cal accelerar més! Intenta de nou";
                     message.style.backgroundColor = "red";
-                    message.style.display = "inline-block";
+                    message.style.display = "flex";
                     resetButton.style.display = "inline-block";
                 }, 2500)
             } 
             else if (jumpPercent < 71) {
                 event3AnimationTwo();
                 setTimeout(() => {
-                    message.innerHTML = "¡Falto un poco mas! Intenta de nuevo";
+                    message.innerHTML = "Mancat una mica més! Intenta de nou";
                     message.style.backgroundColor = "yellow";
-                    message.style.display = "inline-block";
+                    message.style.display = "flex";
                     resetButton.style.display = "inline-block";
                 }, 2500)
             }
             else {
                 setTimeout(() => {
-                    message.innerHTML = "¡Lo lograste!";
+                    message.innerHTML = "Ho has aconseguit!";
                     message.style.backgroundColor = "green";
-                    message.style.display = "inline-block";
+                    message.style.display = "flex";
                     advanceButton.style.display = "inline-block";
-                }, 2500)
+                }, 1500)
                 event3AnimationThree();
             }
         }
@@ -72,6 +73,7 @@ function eventThree() {
         document.querySelector("#event3").style.visibility = "hidden"
         pauseButton.disabled = false;
         pause = false;
+        inEvent = false;
         setTimeout(landscapeMovement, 10);
         
     })
@@ -154,9 +156,9 @@ function eventThree() {
         let rotationDegOne = 360;
         
         
-        car.style.transition = `1s linear`;
-        wheelFront.style.transition = `1s linear`;
-        wheelBack.style.transition = `1s linear`;
+        car.style.transition = `0.5s linear`;
+        wheelFront.style.transition = `0.5s linear`;
+        wheelBack.style.transition = `0.5s linear`;
         
         car.style.transform = `translateX(180px)`;
         wheelFront.style.transform =  `rotate(${rotationDegOne}deg)`;
@@ -166,20 +168,19 @@ function eventThree() {
             car.style.transform = `translate(320px, -50px) rotate(-10deg) `;
             wheelFront.style.transform =  `rotate(${rotationDegOne*2}deg)`;
             wheelBack.style.transform = `rotate(${rotationDegOne*2}deg)`;
-        }, 1000)
+        }, 500)
         
         setTimeout( () => {
             car.style.transform = `translate(580px, -20px) rotate(2deg) `;
             wheelFront.style.transform =  `rotate(${rotationDegOne*3}deg)`;
             wheelBack.style.transform = `rotate(${rotationDegOne*3}deg)`;
-        }, 2000)
+        }, 1000)
         
         setTimeout( () => {
             car.style.transform = `translate(880px, -20px) rotate(2deg) `;
             wheelFront.style.transform =  `rotate(${rotationDegOne*4}deg)`;
             wheelBack.style.transform = `rotate(${rotationDegOne*4}deg)`;
-        }, 3000)
-        
+        }, 1500)
         
     }
 }

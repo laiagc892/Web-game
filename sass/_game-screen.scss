@@ -64,6 +64,7 @@
             }
         }
         .events{
+
             .event{
                 visibility: hidden;
                 width: 850px;
@@ -75,7 +76,7 @@
                 border: 5px solid $color_border;
 
                 button{
-                    width: 80px;
+                    width: 110px;
                     height: 30px;
                     padding: 10px;
                     margin: 10px;
@@ -91,7 +92,6 @@
                 }
     
                 p {
-                    height: 30px;
                     padding: 10px;
                     margin: 10px;
                     text-align: center;
@@ -107,6 +107,19 @@
                 }
             }
 
+            #intro {
+                visibility: visible;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 60px;
+                padding-top: 30px;
+
+                p {
+                    text-align: left;
+                    font-family: $font_mono ;
+                }
+            }
 
             #event1 {
                 display: flex;
@@ -152,6 +165,10 @@
 
                 #event3-reset ,#event3-advance, #event3-message {
                     display: none;
+                }
+
+                #event3-message {
+                    align-items: center;
                 }
 
                 #progress-bar {
@@ -209,6 +226,19 @@
                     display: flex;
                     align-items: center;
                     flex-direction: column;
+
+                    .button-check {
+                        display: flex;
+                        flex-direction: row;
+                        position: relative;
+                        left: 25px;
+
+                        img {
+                            visibility: hidden;
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
 
                     .image-container {
                         height: 100%;
