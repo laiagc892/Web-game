@@ -24,5 +24,9 @@ function eventFour() {
             }
         }
     })
+    
+    gameEnd.addEventListener("click", feedbackForm);
 }
+
+
 // end of functions for event four upgrade
