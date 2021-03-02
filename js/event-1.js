@@ -1,7 +1,7 @@
 // Functions for Event One Drag and drop
 
 function allowDrop(ev) {
-    if (ev.target.className != "image")ev.preventDefault();
+    if (ev.target.className != "event-image")ev.preventDefault();
 }
 
 function drag(ev) {
@@ -15,7 +15,7 @@ function drop(ev) {
     ;
 }
 function eventOne() {
-    
+    pauseButton.disabled = "true";
     document.querySelector("#event1").style.visibility = "visible"
     let checkButton = document.querySelector("#event1-check");
     let message = document.querySelector("#event1-message");
@@ -74,6 +74,7 @@ function eventOne() {
     
     advanceButton.addEventListener("click", () => {
         document.querySelector("#event1").style.visibility = "hidden"
+        pauseButton.disabled = false;
         setTimeout(landscapeMovement, 10);
         
     })

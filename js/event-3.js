@@ -1,6 +1,7 @@
 // Functions for event three jump
 
 function eventThree() {
+    pauseButton.disabled = "true";
     document.querySelector("#event3").style.visibility = "visible"
     var jumpPercent = 0;
     var pressed = false
@@ -69,6 +70,7 @@ function eventThree() {
     
     advanceButton.addEventListener("click", () => {
         document.querySelector("#event3").style.visibility = "hidden"
+        pauseButton.disabled = false;
         pause = false;
         setTimeout(landscapeMovement, 10);
         

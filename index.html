@@ -28,16 +28,16 @@
                         <h2>¿Que modo de energía es mejor para el medio ambiente?</h1>
                         <div class="dropabble">
                             <div class="initial-position" id="start-one">
-                                <img src="./img/eventOne/diesel.svg" id="diesel" draggable="true" ondragstart="drag(event)" name="diesel" alt="">
+                                <img class="event-image" src="./img/eventOne/diesel.svg" id="diesel" draggable="true" ondragstart="drag(event)" name="diesel" alt="">
                             </div>
                             <div class="initial-position" id="start-two">
-                                <img src="./img/eventOne/gasoline.svg" id="gasoline" draggable="true" ondragstart="drag(event)" name="gasoline" alt="">
+                                <img class="event-image" src="./img/eventOne/gasoline.svg" id="gasoline" draggable="true" ondragstart="drag(event)" name="gasoline" alt="">
                             </div>
                             <div class="initial-position" id="start-three">
-                                <img src="./img/eventOne/electric.svg" id="electric" draggable="true" ondragstart="drag(event)" name="electric" alt="">
+                                <img class="event-image" src="./img/eventOne/electric.svg" id="electric" draggable="true" ondragstart="drag(event)" name="electric" alt="">
                             </div>
                             <div class="initial-position" id="start-four">
-                                <img src="./img/eventOne/gas.svg" id="gas" draggable="true" ondragstart="drag(event)" name="gas" alt="">
+                                <img class="event-image" src="./img/eventOne/gas.svg" id="gas" draggable="true" ondragstart="drag(event)" name="gas" alt="">
                             </div>
                         </div>
                         <p>Ordenalos abajo de mejor a peor.</p>
@@ -72,7 +72,52 @@
                         </div>
                     </div>
                     <!-- ----------------------- 4 EV. ----------------------- -->
-                    <div class="event" id="event4"></div>
+                    <div class="event" id="event4">
+                        <h2>Taller</h2>
+                        <p>Cambia el suministro de energia de tu coche para ayudar al medio ambiente</p>
+                        <div class="energy-change">
+                            <div class="energy-options">
+                                <div class="energy-option" >
+                                    <h3 id="h3-diesel">Diesel</h3>
+                                    <div class="image-container" ondrop="drop(event)" ondragover="allowDrop(event)" name="event4-diesel">
+                                        <img class="event-image" id="event4-diesel" src="./img/eventFour/diesel.svg" draggable="true" ondragstart="drag(event)" alt="">
+                                    </div>  
+                                </div>
+                                <div class="energy-option">
+                                    <h3 id="h3-gas">Gas</h3>
+                                    <div class="image-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <img class="event-image" id="event4-gas" src="./img/eventFour/gas.svg" draggable="true" ondragstart="drag(event)" alt="">
+                                    </div>
+                                </div>
+                                <div class="energy-option">
+                                    <h3 id="h3-electric">Electricidad</h3>
+                                    <div class="image-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <img class="event-image" id="event4-electric" src="./img/eventFour/battery.svg" draggable="true" ondragstart="drag(event)" alt="">
+                                    </div>
+                                </div>
+                                <div class="energy-option" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                    <h3 id="h3-gasoline">Gasolina</h3>
+                                    <div class="image-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="event4-check">Check</button>
+                            <div class="current-energy" >
+                                <h3>Actual</h3>
+                                <div class="image-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                    <img class="event-image" id="event4-gasoline" src="./img/eventFour/gasoline.svg" draggable="true" ondragstart="drag(event)" alt="">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="car" id="event4-car">
+                            <img id="event4-car-body" src="./img/car/car_body.png" alt="car body">
+                            <img class="car-wheels" id="event4-car-wheel-front" src="./img/car/car_wheel.png" alt="car wheel">
+                            <img class="car-wheels" id="event4-car-wheel-back" src="./img/car/car_wheel.png" alt="car wheel">
+                        </div>
+
+                        <button id="event4-finish">¡Has ecolucionat!</button>
+                    </div>
                     <!-- ----------------------- 4 EV. ----------------------- -->
                     <div class="event" id="feedback"></div>
                 </div>
