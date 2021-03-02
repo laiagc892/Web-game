@@ -24,9 +24,17 @@
                 </div>
                 <!-- ----------------------- EVENTS ----------------------- -->
                 <div class="events">
+                    <div class="event" id="intro">
+                        <p>Cada dia es fa més important canviar els nostres hàbits per ajudar al nostre planeta. El sobreescalfament global és una crisi mundial que ha anat empitjorant i cal anar augmentant les mesures si volem salvar el medi ambient.</p>
+
+                        <p> És per això que cada vegada son més els països que afegeixen mesures de conscienciació i control sobre les emissions i en l'any 2021 ja hi ha diversesciutats amb "zones de baixes emissions" que s'espera que s'expandeixin cada cop més. Barcelona és una d'aquestes ciutats. És per això que els ciutadans iels transports han d'Ecolucionar!</p>
+                         
+                        <p>Et plantegem l'evolució d'un cotxe cap a un futur més ecològic, arribaràs al l'objectiu final?</p>
+                        <button id="game-start">Comença</button>
+                    </div>
                     <!-- ----------------------- 1 EV. ----------------------- -->
                     <div class="event" id="event1">
-                        <h2>¿Que modo de energía es mejor para el medio ambiente?</h1>
+                        <h2>Que manera d'energia és millor per al medi ambient?</h1>
                         <div class="dropabble">
                             <div class="initial-position" id="start-one">
                                 <img class="event-image" src="./img/eventOne/diesel.svg" id="diesel" draggable="true" ondragstart="drag(event)" name="diesel" alt="">
@@ -41,30 +49,31 @@
                                 <img class="event-image" src="./img/eventOne/gas.svg" id="gas" draggable="true" ondragstart="drag(event)" name="gas" alt="">
                             </div>
                         </div>
-                        <p>Ordenalos abajo de mejor a peor.</p>
+                        <p>Ordena'ls baix de millor a pitjor.</p>
                         <div class="dropabble">
                             <div class="end-position" id="end-one" ondrop="drop(event)" ondragover="allowDrop(event)" name="electric"></div>
                             <div class="end-position" id="end-two" ondrop="drop(event)" ondragover="allowDrop(event)" name="gas"></div>
                             <div class="end-position" id="end-three" ondrop="drop(event)" ondragover="allowDrop(event)" name="diesel"></div>
                             <div class="end-position" id="end-four" ondrop="drop(event)" ondragover="allowDrop(event)" name="gasoline"></div>
                         </div>
-                        <button id="event1-check">Check</button>
-                        <p id="event1-message">Wrong Answer! 2 attempts left</p>
-                        <button id="event1-reset">Reset</button>
-                        <button id="event1-advance">Advance</button>
+                        <button id="event1-check">Comprova</button>
+                        <p id="event1-message">Resposta incorrecta! Queden 2 intents</p>
+                        <button id="event1-reset">Restableix</button>
+                        <button id="event1-advance">Continuar</button>
                     </div>
                     <!-- ----------------------- 2 EV. ----------------------- -->
                     <!-- <div class="event" id="event2">
                     </div> -->
                     <!-- ----------------------- 3 EV. ----------------------- -->
                     <div class="event" id="event3">
-                        <h2>¡Presiona espacio para llenar la barra y saltar!</h2>
+                        <h2>Presiona espai per llenar la barra i saltar!</h2>
                         <div id="progress-bar">
                             <div id="bar"></div>
                         </div>
-                        <p id="event3-message">!Prueba de nuevo!</p>
-                        <button id="event3-reset">Reset</button>
-                        <button id="event3-advance">Advance</button>
+                        <p id="event3-message">!Prueba de nou!</p>
+                        <button id="event3-reset">Restableix</button>
+                        <button id="event3-advance">Continua</button>
+
                         <div class="car" id="event3-car">
                             <img id="event3-car-body" src="./img/car/car_body.png" alt="car body">
                             <img class="car-wheels" id="event3-car-wheel-front" src="./img/car/car_wheel.png" alt="car wheel">
@@ -74,7 +83,7 @@
                     <!-- ----------------------- 4 EV. ----------------------- -->
                     <div class="event" id="event4">
                         <h2>Taller</h2>
-                        <p>Cambia el suministro de energia de tu coche para ayudar al medio ambiente</p>
+                        <p>Canvia el subministrament d'energia del teu cotxe per ajudar al medi ambient</p>
                         <div class="energy-change">
                             <div class="energy-options">
                                 <div class="energy-option" >
@@ -90,7 +99,7 @@
                                     </div>
                                 </div>
                                 <div class="energy-option">
-                                    <h3 id="h3-electric">Electricidad</h3>
+                                    <h3 id="h3-electric">Electricitat</h3>
                                     <div class="image-container" ondrop="drop(event)" ondragover="allowDrop(event)">
                                         <img class="event-image" id="event4-electric" src="./img/eventFour/battery.svg" draggable="true" ondragstart="drag(event)" alt="">
                                     </div>
@@ -101,9 +110,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <button id="event4-check">Check</button>
+                            <div class="button-check">
+                                <button id="event4-check">Comprova</button>
+                                <img id="event4-wrong" src="./img/eventFour/errorX.svg" alt="">
+                            </div>
                             <div class="current-energy" >
-                                <h3>Actual</h3>
+                                <h3>Real</h3>
                                 <div class="image-container" ondrop="drop(event)" ondragover="allowDrop(event)">
                                     <img class="event-image" id="event4-gasoline" src="./img/eventFour/gasoline.svg" draggable="true" ondragstart="drag(event)" alt="">
                                 </div>
@@ -186,7 +198,7 @@
             <!-- ----------------------- COMMANDS ----------------------- -->
             <div class="commands">
                 <!-- <button id="menu">Menu</button> -->
-                <button id="pause">Pause</button>
+                <button id="pause">Pausa</button>
             </div>
         </main>
         <footer>

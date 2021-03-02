@@ -64,6 +64,7 @@
             }
         }
         .events{
+
             .event{
                 visibility: hidden;
                 width: 850px;
@@ -74,7 +75,7 @@
                 background-color: $color_event-bg;
                 border: 5px solid $color_border;
                 button{
-                    width: 80px;
+                    width: 110px;
                     height: 30px;
                     padding: 10px;
                     margin: 10px;
@@ -89,7 +90,6 @@
                     border-radius: 5px;
                 }
                 p {
-                    height: 30px;
                     padding: 10px;
                     margin: 10px;
                     text-align: center;
@@ -103,6 +103,21 @@
                     $size_font-M: 2em;
                 }
             }
+
+            #intro {
+                visibility: visible;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 60px;
+                padding-top: 30px;
+
+                p {
+                    text-align: left;
+                    font-family: $font_mono ;
+                }
+            }
+
             #event1 {
                 display: flex;
                 flex-wrap: wrap;
@@ -144,6 +159,11 @@
                 #event3-reset ,#event3-advance, #event3-message {
                     display: none;
                 }
+
+                #event3-message {
+                    align-items: center;
+                }
+
                 #progress-bar {
                     margin-top: 5px;
                     width: 80%;
@@ -193,6 +213,20 @@
                     display: flex;
                     align-items: center;
                     flex-direction: column;
+
+                    .button-check {
+                        display: flex;
+                        flex-direction: row;
+                        position: relative;
+                        left: 25px;
+
+                        img {
+                            visibility: hidden;
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+
                     .image-container {
                         height: 100%;
                         width: 100%;

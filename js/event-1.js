@@ -15,7 +15,7 @@ function drop(ev) {
     ;
 }
 function eventOne() {
-    pauseButton.disabled = "true";
+    inEvent = true;
     document.querySelector("#event1").style.visibility = "visible"
     let checkButton = document.querySelector("#event1-check");
     let message = document.querySelector("#event1-message");
@@ -39,12 +39,12 @@ function eventOne() {
         }
         
         if (answer) {
-            message.innerHTML = "CORRECTO!"
+            message.innerHTML = "CORRECTE!"
             message.style.backgroundColor = "green";
             advanceButton.style.display = "inline-block"
         } 
         else {
-            message.innerHTML = `INCORRECTO presiona reset e intenta de nuevo!`
+            message.innerHTML = `INCORRECTE pressiona reset i intenta de nou!`
             message.style.backgroundColor = "red";
             resetButton.style.display = "inline-block"
         }
@@ -75,6 +75,7 @@ function eventOne() {
     advanceButton.addEventListener("click", () => {
         document.querySelector("#event1").style.visibility = "hidden"
         pauseButton.disabled = false;
+        inEvent = false;
         setTimeout(landscapeMovement, 10);
         
     })

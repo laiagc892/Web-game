@@ -98,7 +98,7 @@
 }
 
 .game-screen .game .events .event button {
-  width: 80px;
+  width: 110px;
   height: 30px;
   padding: 10px;
   margin: 10px;
@@ -117,7 +117,6 @@
 }
 
 .game-screen .game .events .event p {
-  height: 30px;
   padding: 10px;
   margin: 10px;
   text-align: center;
@@ -127,6 +126,20 @@
 
 .game-screen .game .events .event h2 {
   font-family: "Roboto", sans-serif;
+}
+
+.game-screen .game .events #intro {
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px;
+  padding-top: 30px;
+}
+
+.game-screen .game .events #intro p {
+  text-align: left;
+  font-family: "Roboto Mono", monospace;
 }
 
 .game-screen .game .events #event1 {
@@ -174,6 +187,10 @@
 
 .game-screen .game .events #event3 #event3-reset, .game-screen .game .events #event3 #event3-advance, .game-screen .game .events #event3 #event3-message {
   display: none;
+}
+
+.game-screen .game .events #event3 #event3-message {
+  align-items: center;
 }
 
 .game-screen .game .events #event3 #progress-bar {
@@ -234,6 +251,19 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.game-screen .game .events #event4 .energy-change .button-check {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 25px;
+}
+
+.game-screen .game .events #event4 .energy-change .button-check img {
+  visibility: hidden;
+  width: 50px;
+  height: 50px;
 }
 
 .game-screen .game .events #event4 .energy-change .image-container {
