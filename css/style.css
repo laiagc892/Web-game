@@ -52,7 +52,7 @@
   font-size: 1em;
   font-weight: bold;
   color: white;
-  background-color: cadetblue;
+  background-color: #007575;
   border: 3px solid brown;
   border-radius: 5px;
 }
@@ -148,7 +148,7 @@
   font-size: 1em;
   font-weight: bold;
   color: white;
-  background-color: cadetblue;
+  background-color: #007575;
   border: 3px solid brown;
   border-radius: 5px;
 }
@@ -183,7 +183,7 @@
 }
 
 .game-screen .game .events #intro h1 {
-  color: cadetblue;
+  color: #007575;
   font-family: "Roboto", sans-serif;
   font-size: 2em;
 }
@@ -458,7 +458,7 @@
   font-size: 1em;
   font-weight: bold;
   color: white;
-  background-color: cadetblue;
+  background-color: #007575;
   border: 3px solid brown;
   border-radius: 5px;
 }
@@ -468,19 +468,6 @@
 }
 
 .game-screen .game .events #feedback #form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin: 10px;
 }
 
@@ -494,7 +481,7 @@
 body {
   margin: 0 auto;
   width: 1024px;
-  background-color: cadetblue;
+  background-color: #007575;
 }
 
 .content {

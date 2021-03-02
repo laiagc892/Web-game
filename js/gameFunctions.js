@@ -71,7 +71,6 @@ function landscapeMovement() {
         pause = true;
         eventFour();
         landscape.style.backgroundColor = "white";
-        landscape.style.backgroundImage = "url('./img/bg_test/testbg-first.png')";
     }
     
     if (!pause && !gameEnd) {
