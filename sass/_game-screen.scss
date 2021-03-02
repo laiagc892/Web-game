@@ -64,7 +64,6 @@
             }
         }
         .events{
-
             .event{
                 visibility: hidden;
                 width: 850px;
@@ -103,7 +102,6 @@
                     $size_font-M: 2em;
                 }
             }
-
             #intro {
                 visibility: visible;
                 display: flex;
@@ -111,13 +109,17 @@
                 flex-direction: column;
                 padding: 60px;
                 padding-top: 30px;
-
+                h1{
+                    color: $color_font-light;
+                    font-family: $font_standard;
+                    font-size: $size_font-M;
+                    margin: 10px auto;
+                }
                 p {
                     text-align: left;
                     font-family: $font_mono ;
                 }
             }
-
             #event1 {
                 display: flex;
                 flex-wrap: wrap;
@@ -159,11 +161,9 @@
                 #event3-reset ,#event3-advance, #event3-message {
                     display: none;
                 }
-
                 #event3-message {
                     align-items: center;
                 }
-
                 #progress-bar {
                     margin-top: 5px;
                     width: 80%;
@@ -213,20 +213,17 @@
                     display: flex;
                     align-items: center;
                     flex-direction: column;
-
                     .button-check {
                         display: flex;
                         flex-direction: row;
                         position: relative;
                         left: 25px;
-
                         img {
                             visibility: hidden;
                             width: 50px;
                             height: 50px;
                         }
                     }
-
                     .image-container {
                         height: 100%;
                         width: 100%;
