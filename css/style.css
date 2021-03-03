@@ -54,7 +54,7 @@
   color: white;
   background-color: #007575;
   border: 3px solid brown;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .game-screen .game {
@@ -122,8 +122,24 @@
   position: absolute;
   left: 55px;
   top: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: wheat;
   border: 5px solid brown;
+  border-radius: 20px;
 }
 
 .game-screen .game .events .event button {
@@ -151,7 +167,7 @@
   color: white;
   background-color: #007575;
   border: 3px solid brown;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .game-screen .game .events .event p {
@@ -171,17 +187,7 @@
 
 .game-screen .game .events #intro {
   visibility: visible;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 30px 60px 80px 60px;
+  padding: 0 60px;
 }
 
 .game-screen .game .events #intro h1 {
@@ -198,18 +204,6 @@
   padding: 0;
 }
 
-.game-screen .game .events #event1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-}
-
 .game-screen .game .events #event1 #event1-reset, .game-screen .game .events #event1 #event1-advance {
   display: none;
 }
@@ -224,6 +218,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 800px;
   margin: auto;
 }
@@ -235,28 +235,24 @@
 
 .game-screen .game .events #event1 .dropabble .initial-position {
   margin: 5px;
-  width: 200px;
-  height: 150px;
+  width: 130px;
+  height: 100px;
+  padding: 10px 0;
 }
 
 .game-screen .game .events #event1 .dropabble .end-position {
   margin: 5px;
-  width: 200px;
-  height: 150px;
-  border: 1px solid black;
+  width: 130px;
+  height: 100px;
+  border: 2px solid brown;
+  border-radius: 10px;
+  padding: 10px 0;
 }
 
 .game-screen .game .events #event3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background-image: url("../img/eventThree/cliff.svg");
   overflow: hidden;
 }
@@ -298,18 +294,14 @@
 }
 
 .game-screen .game .events #event4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   overflow: hidden;
+}
+
+.game-screen .game .events #event4 .h2 {
+  margin: 0px;
 }
 
 .game-screen .game .events #event4 .car {
@@ -363,8 +355,9 @@
 
 .game-screen .game .events #event4 .energy-change .button-check img {
   visibility: hidden;
-  width: 50px;
-  height: 50px;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
 }
 
 .game-screen .game .events #event4 .energy-change .image-container {
@@ -393,9 +386,10 @@
 .game-screen .game .events #event4 .energy-change .current-energy {
   position: relative;
   padding: 5px 0;
-  height: 95px;
+  height: 75px;
   width: 20%;
-  border: 1px solid black;
+  border: 2px solid brown;
+  border-radius: 10px;
 }
 
 .game-screen .game .events #event4 .energy-change .energy-options {
@@ -406,7 +400,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 105px;
+  height: 75px;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -416,9 +410,10 @@
 .game-screen .game .events #event4 .energy-change .energy-options .energy-option {
   position: relative;
   padding: 5px 0;
-  height: 95px;
+  height: 75px;
   width: 20%;
-  border: 1px solid black;
+  border: 2px solid brown;
+  border-radius: 10px;
 }
 
 .game-screen .game .events #event4 .energy-change .energy-options .energy-option #h3-diesel {
@@ -439,7 +434,7 @@
 
 .game-screen .game .events #event4 #event4-finish {
   position: relative;
-  top: 40px;
+  top: 5px;
   z-index: 1;
   width: 230px;
   height: 30px;
@@ -470,10 +465,53 @@
 
 .game-screen .game .events #feedback {
   overflow: auto;
+  font-family: "Roboto", sans-serif;
 }
 
 .game-screen .game .events #feedback #form {
-  margin: 10px;
+  margin: 0 20px;
+}
+
+.game-screen .game .events #feedback #form h3 {
+  margin: 5px;
+}
+
+.game-screen .game .events #feedback #form .options {
+  margin: 5px;
+}
+
+.game-screen .game .events #feedback #form textarea {
+  width: 500px;
+  height: 30px;
+  margin: 0;
+}
+
+.game-screen .game .events #feedback #feedback-send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-screen .game .events #feedback #feedback-send #error {
+  visibility: hidden;
+  color: white;
+  background-color: red;
+}
+
+.game-screen .game .events #results {
+  display: block;
+}
+
+.game-screen .game .events #results p {
+  text-align: left;
+  padding: 0;
+  margin: 0;
 }
 
 * {
@@ -486,7 +524,8 @@
 body {
   margin: 0 auto;
   width: 1024px;
-  background-color: #007575;
+  background-image: url("../img/background/background.svg");
+  background-size: cover;
 }
 
 .content {
@@ -531,47 +570,6 @@ body {
 }
 
 .content main.game-screen {
-  margin: 10px 0;
-}
-
-.content footer {
-  width: 960px;
-  height: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.content footer button {
-  width: 80px;
-  height: 30px;
-  padding: 10px;
-  margin: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-family: "Roboto Mono", monospace;
-  font-size: 1em;
-  font-weight: bold;
-  color: darkslategray;
-  background-color: white;
-  border: 3px solid brown;
-  border-radius: 5px;
+  margin: 0 20px 40px 20px;
 }
 /*# sourceMappingURL=style.css.map */

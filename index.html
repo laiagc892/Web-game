@@ -174,23 +174,29 @@
                             </div>
                             <!-- ----------------------- Q4 ----------------------- -->
                             <h3>{{ q4.question }}</h3>
-                            <textarea name="question4" id="a4" cols="30" rows="10"></textarea>
+                            <textarea class="options" name="question4" id="a4" cols="30" rows="10"></textarea>
                         </div>
-                        <button @click="boto" id="send">Envia!</button>
-                        <p id="error"></p>
-                        <div id="results">
-                            <p>Resultats</p>
-                            <!-- <p v-for="stat of q1.answers">{{ stat }}</p>
-                            <p v-for="stat of q2.answers">{{ stat }}</p>
-                            <p v-for="stat of q3.answers">{{ stat }}</p> -->
-                            <!-- <h3>1) És necessària una evolució en els combustibles dels transports cap a una energia més ecològica per reduïr la contaminació?</h3>
-                            <div id="q1a1"></div>
-                            <div id="q1a2"></div>
-                            <div id="q1a3"></div> -->
-                            <!-- <h3>2) Et mous amb un transport eco, de baixa contaminació o públic?</h3>
-                            <h3>3) Has pensat en millorar la teva movilitat amb un transport menys contaminant?</h3>
-                            <h3>4) Comentaris destacats</h3> -->
+                        <div id="feedback-send">
+                            <button @click="boto" id="send">Envia!</button>
+                            <p id="error">Et falta escollir alguna resposta.</p>
                         </div>
+                    </div>
+                    <div class="event" id="results">
+                        <h2>Els resultats estaran disponibles quan un nombre mínim de participants hagin realitzat el qüestionari :)</h2>
+                        <!-- <div id="form">
+                            <h3>{{ q1.question }}</h3>
+                                <p>Sí!</p>
+                                <p>No.</p>
+                                <p>M'és igual...</p>
+                            <h3>{{ q2.question }}</h3>
+                                <p>Sí, pràcticament sempre.</p>
+                                <p> A vegades.</p>
+                                <p>No, quasibé mai</p>
+                            <h3>{{ q3.question }}</h3>
+                                <p>Ja n'utilitzo de poc contaminant (o públic).</p>
+                                <p>Sovint... Tot i que encara no l'he canviat.</p>
+                                <p>No m'ho he plantejat encara, la veritat...</p>
+                        </div> -->
                     </div>
                 </div>
             </div>

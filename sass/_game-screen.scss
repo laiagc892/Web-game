@@ -27,7 +27,7 @@
             color: $color_font-light;
             background-color: $color_button-dark;
             border: 3px solid $color_border;
-            border-radius: 5px;
+            border-radius: 10px;
         }
     }
     .game{
@@ -72,8 +72,14 @@
                 position: absolute;
                 left: 55px;
                 top: 57px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: column;
                 background-color: $color_event-bg;
                 border: 5px solid $color_border;
+                border-radius: 20px;
                 button{
                     width: 110px;
                     height: 30px;
@@ -87,7 +93,7 @@
                     color: $color_font-light;
                     background-color: $color_button-dark;
                     border: 3px solid $color_border;
-                    border-radius: 5px;
+                    border-radius: 10px;
                 }
                 p {
                     padding: 10px;
@@ -106,10 +112,7 @@
             }
             #intro {
                 visibility: visible;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                padding: 30px 60px 80px 60px;
+                padding: 0 60px;
                 h1{
                     color: $color_button-dark;
                     font-family: $font_standard;
@@ -124,14 +127,9 @@
                 }
             }
             #event1 {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                text-align: center;
                 #event1-reset ,#event1-advance {
                     display: none;
                 }
-
                 #event1-message {
                     display: none;
                     position: absolute;
@@ -139,32 +137,32 @@
                 }
                 .dropabble {
                     display: flex;
+                    justify-content: center;
+                    align-items: center;
                     width: 800px;
                     margin: auto;
-                    
                     img {
                         width: 100%;
                         height: 100% ;
-                        
                     }
                     .initial-position {
                         margin: 5px;
-                        width: 200px;
-                        height: 150px;
-                        
+                        width: 130px;
+                        height: 100px;
+                        padding: 10px 0;
                     }
                     .end-position {
                         margin: 5px;
-                        width: 200px;
-                        height: 150px;
-                        border: 1px solid black;
+                        width: 130px;
+                        height: 100px;
+                        border: 2px solid $color_border;
+                        border-radius: 10px;
+                        padding: 10px 0;
                     }
                 }
             }
             #event3 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                justify-content: flex-start;
                 background-image: url("../img/eventThree/cliff.svg");
                 overflow: hidden;
                 #event3-reset ,#event3-advance, #event3-message {
@@ -196,11 +194,12 @@
                 }
             }
             #event4 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+                justify-content: flex-start;
                 overflow: hidden;
+
+                .h2 {
+                    margin: 0px;
+                }
                 .car {
                     left: 50%;
                     transform: translateX(-50%);
@@ -229,8 +228,9 @@
                         left: 25px;
                         img {
                             visibility: hidden;
-                            width: 50px;
-                            height: 50px;
+                            margin-top: 10px;
+                            width: 30px;
+                            height: 30px;
                         }
                     }
                     .image-container {
@@ -257,22 +257,24 @@
                     .current-energy {
                         position: relative;
                         padding: 5px 0;
-                        height: 95px;
+                        height: 75px;
                         width: 20%;
-                        border: 1px solid black;
+                        border: 2px solid $color_border;
+                        border-radius: 10px;
                     }
                     .energy-options {
                         display: flex;
                         flex-direction: row;
-                        height: 105px;
+                        height: 75px;
                         width: 100%;
                         justify-content: space-between;
                         .energy-option {
                             position: relative;
                             padding: 5px 0;
-                            height: 95px;
+                            height: 75px;
                             width: 20%;
-                            border: 1px solid black;
+                            border: 2px solid $color_border;
+                            border-radius: 10px;
                             #h3-diesel {
                                 color: #d4aa00ff;
                             }
@@ -290,7 +292,7 @@
                 }
                 #event4-finish{
                     position: relative;
-                    top: 40px;
+                    top: 5px;
                     z-index: 1;
                     width: 230px;
                     height: 30px;
@@ -309,8 +311,39 @@
             }
             #feedback{
                 overflow: auto;
+                font-family: $font_standard;
                 #form{
-                    margin: 10px;
+                    margin: 0 20px;
+                    h3{
+                        margin: 5px;
+                    }
+                    .options{
+                        margin: 5px;
+                    }
+                    textarea{
+                        width: 500px;
+                        height: 30px;
+                        margin: 0;
+                    }
+                }
+                #feedback-send{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    #error{
+                        visibility: hidden;
+                        color: $color_font-light;
+                        background-color: red;
+                    }
+                }
+            }
+            #results{
+                display: block;
+
+                p{
+                    text-align: left;
+                    padding: 0;
+                    margin: 0;
                 }
             }
         }
