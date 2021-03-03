@@ -42,7 +42,7 @@ function eventThree() {
             if (jumpPercent < 31) {
                 event3AnimationOne();
                 setTimeout(() => {
-                    message.innerHTML = "Cal accelerar més! Intenta de nou";
+                    message.innerHTML = "Cal accelerar més! Intenta-ho de nou";
                     message.style.backgroundColor = "red";
                     message.style.display = "flex";
                     resetButton.style.display = "inline-block";
@@ -51,7 +51,7 @@ function eventThree() {
             else if (jumpPercent < 71) {
                 event3AnimationTwo();
                 setTimeout(() => {
-                    message.innerHTML = "Mancat una mica més! Intenta de nou";
+                    message.innerHTML = "T'ha faltat una mica! Intenta-ho de nou";
                     message.style.backgroundColor = "yellow";
                     message.style.display = "flex";
                     resetButton.style.display = "inline-block";

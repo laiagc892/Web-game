@@ -44,7 +44,7 @@ function eventOne() {
             advanceButton.style.display = "inline-block"
         } 
         else {
-            message.innerHTML = `INCORRECTE pressiona reset i intenta de nou!`
+            message.innerHTML = `INCORRECTE! Pressiona Restableix i intenta-ho de nou!`
             message.style.backgroundColor = "red";
             resetButton.style.display = "inline-block"
         }
@@ -76,12 +76,9 @@ function eventOne() {
         document.querySelector("#event1").style.visibility = "hidden"
         pauseButton.disabled = false;
         inEvent = false;
+        pause = false;
         setTimeout(landscapeMovement, 10);
-        
     })
-    
-    
-    
 }
 
 // end of functions for event One drag and drop

@@ -25,7 +25,10 @@ function eventFour() {
         }
     })
     
-    gameEnd.addEventListener("click", feedbackForm);
+    gameEnd.addEventListener("click", () => {
+        document.querySelector("#event4").style.visibility = "hidden";
+        feedbackForm();
+    });
 }
 
 

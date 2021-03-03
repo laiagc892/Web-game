@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gameName</title>
+    <title>Ecolucio</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="content">
         <header>
-            <div id="logo">Ecolució</div>
+            <img id="logo" src="./img/logo/logo_ecolucio.png" alt="">
         </header>
         <main class="game-screen">
             <div class="game">
@@ -24,7 +24,7 @@
                 <!-- ----------------------- EVENTS ----------------------- -->
                 <div class="events">
                     <div class="event" id="intro">
-                        <h1>Welcome!</h1>
+                        <h1>Important!</h1>
                         <p>Cada dia es fa més important canviar els nostres hàbits per ajudar al nostre planeta. El sobreescalfament global és una crisi mundial que ha anat empitjorant i cal anar augmentant les mesures si volem salvar el medi ambient.</p>
                         <p> És per això que cada vegada son més els països que afegeixen mesures de conscienciació i control sobre les emissions i en l'any 2021 ja hi ha diversesciutats amb "zones de baixes emissions" que s'espera que s'expandeixin cada cop més. Barcelona és una d'aquestes ciutats. És per això que els ciutadans iels transports han d'Ecolucionar!</p>
                         <p>Et plantegem l'evolució d'un cotxe cap a un futur més ecològic, arribaràs al l'objectiu final?</p>
@@ -32,7 +32,7 @@
                     </div>
                     <!-- ----------------------- 1 EV. ----------------------- -->
                     <div class="event" id="event1">
-                        <h2>Que manera d'energia és millor per al medi ambient?</h1>
+                        <h2>Quina font d'energia és millor pel medi ambient?</h1>
                         <div class="dropabble">
                             <div class="initial-position" id="start-one">
                                 <img class="event-image" src="./img/eventOne/diesel.svg" id="diesel" draggable="true" ondragstart="drag(event)" name="diesel" alt="">
@@ -47,7 +47,7 @@
                                 <img class="event-image" src="./img/eventOne/gas.svg" id="gas" draggable="true" ondragstart="drag(event)" name="gas" alt="">
                             </div>
                         </div>
-                        <p>Ordena'ls baix de millor a pitjor.</p>
+                        <p>Ordena'ls abaix de MILLOR a PITJOR.</p>
                         <div class="dropabble">
                             <div class="end-position" id="end-one" ondrop="drop(event)" ondragover="allowDrop(event)" name="electric"></div>
                             <div class="end-position" id="end-two" ondrop="drop(event)" ondragover="allowDrop(event)" name="gas"></div>
@@ -55,7 +55,7 @@
                             <div class="end-position" id="end-four" ondrop="drop(event)" ondragover="allowDrop(event)" name="gasoline"></div>
                         </div>
                         <button id="event1-check">Comprova</button>
-                        <p id="event1-message">Resposta incorrecta!</p>
+                        <p id="event1-message">(Correcció)</p>
                         <button id="event1-reset">Restableix</button>
                         <button id="event1-advance">Continuar</button>
                     </div>
@@ -64,11 +64,11 @@
                     </div> -->
                     <!-- ----------------------- 3 EV. ----------------------- -->
                     <div class="event" id="event3">
-                        <h2>Presiona espai per llenar la barra i saltar!</h2>
+                        <h2>Pressiona la tecla d'espai per omplir la barra de color i saltar!</h2>
                         <div id="progress-bar">
                             <div id="bar"></div>
                         </div>
-                        <p id="event3-message">!Prueba de nou!</p>
+                        <p id="event3-message">(Correcció)</p>
                         <button id="event3-reset">Restableix</button>
                         <button id="event3-advance">Continua</button>
 
@@ -125,7 +125,7 @@
                             <img class="car-wheels" id="event4-car-wheel-front" src="./img/car/car_wheel.png" alt="car wheel">
                             <img class="car-wheels" id="event4-car-wheel-back" src="./img/car/car_wheel.png" alt="car wheel">
                         </div>
-                        <button id="event4-finish">¡Has ecolucionat!</button>
+                        <button id="event4-finish">¡Has ECOLUCIONAT!</button>
                     </div>
                     <!-- ----------------------- FEEDBACK ----------------------- -->
                     <div class="event" id="feedback">
@@ -200,10 +200,10 @@
                 <button id="pause">Pausa</button>
             </div>
         </main>
-        <footer>
+        <!-- <footer>
             <button id="faq">FAQ</button>
             <button id="about">About</button>
-        </footer>
+        </footer> -->
     </div>
     <script src="./js/formFirebase.js"></script>
     <script src="./js/event-1.js"></script>

@@ -78,8 +78,9 @@
 .game-screen .game .landscape {
   width: 2880px;
   height: 544px;
+  background-size: cover;
   position: relative;
-  background-image: url("../img/bg_test/testbg-first.png");
+  background-image: url("../img/landscape/landscape1_landscape1.png");
   background-color: black;
 }
 
@@ -165,9 +166,11 @@
 
 .game-screen .game .events .event h2 {
   font-family: "Roboto", sans-serif;
+  margin: 20px;
 }
 
 .game-screen .game .events #intro {
+  visibility: visible;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,19 +181,21 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 60px;
-  padding-top: 30px;
+  padding: 30px 60px 80px 60px;
 }
 
 .game-screen .game .events #intro h1 {
   color: #007575;
   font-family: "Roboto", sans-serif;
   font-size: 2em;
+  margin: 10px;
 }
 
 .game-screen .game .events #intro p {
   text-align: left;
   font-family: "Roboto Mono", monospace;
+  margin: 10px;
+  padding: 0;
 }
 
 .game-screen .game .events #event1 {
@@ -486,7 +491,7 @@ body {
 
 .content {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,9 +526,7 @@ body {
 }
 
 .content header #logo {
-  color: white;
-  font-family: "Roboto Mono", monospace;
-  font-size: 3em;
+  width: 300px;
   margin: 10px;
 }
 

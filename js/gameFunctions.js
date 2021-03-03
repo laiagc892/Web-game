@@ -3,7 +3,7 @@
 - Funció recursiva que si no es clica pausa, crida el setTimeOut() perquè segueixi movent-se (cridant la funció).
 */
 
-feedbackForm()
+// feedbackForm()
 
 // Landscape movement:
 var landscape = document.querySelector("#landscape");
@@ -47,7 +47,7 @@ var gameStart =document.querySelector("#game-start");
 
 gameStart.addEventListener("click", () => {
     document.querySelector("#intro").style.visibility = "hidden";
-    eventOne();
+    landscapeMovement();
 })
 
 function landscapeMovement() {
@@ -63,14 +63,19 @@ function landscapeMovement() {
     if (gameTime == 8000) {
         position = 0;
         pause = true;
-        eventThree();
-        landscape.style.backgroundColor = "lightgrey";
+        eventOne();
+        landscape.style.backgroundColor = "grey";
     }
     if (gameTime == 16000) {
         position = 0;
         pause = true;
-        eventFour();
+        eventThree();
         landscape.style.backgroundColor = "white";
+    }
+    if (gameTime == 24000) {
+        position = 0;
+        pause = true;
+        eventFour();
     }
     
     if (!pause && !gameEnd) {

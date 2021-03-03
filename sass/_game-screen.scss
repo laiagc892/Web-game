@@ -37,8 +37,9 @@
         .landscape{
             width: 2880px;
             height: 544px;
+            background-size: cover;
             position: relative;
-            background-image: url("../img/bg_test/testbg-first.png");
+            background-image: url("../img/landscape/landscape1_landscape1.png");
             background-color: black ;
         }
         .car{
@@ -100,24 +101,26 @@
                 h2 {
                     font-family: $font_standard;
                     $size_font-M: 2em;
+                    margin: 20px;
                 }
             }
             #intro {
-                // visibility: visible;
+                visibility: visible;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                padding: 60px;
-                padding-top: 30px;
+                padding: 30px 60px 80px 60px;
                 h1{
                     color: $color_button-dark;
                     font-family: $font_standard;
                     font-size: $size_font-M;
-                    // margin: 10px auto;
+                    margin: 10px;
                 }
                 p {
                     text-align: left;
                     font-family: $font_mono;
+                    margin: 10px;
+                    padding: 0;
                 }
             }
             #event1 {
