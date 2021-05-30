@@ -7,14 +7,16 @@
     box-sizing: border-box;
 }
 body{
-    margin: 0 auto;
-    width: 1024px;
-    background-image: url("../img/background/background.svg");
-    background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../img/background/background.svg");
+  background-size: cover;
+  @include flexCenter(column);
 }
 .content{
-    width: 100%;
-    height: 100%;
+  margin: 0 auto;
+  width: 1024px;
+  height: 100%;
     @include flexCenter(column);
     header{
         @include flexCenter(column);
