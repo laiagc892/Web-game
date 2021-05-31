@@ -1,4 +1,4 @@
-# Ecolució
+# Ecolució - web game demo
 
 CA: Projecte Final sobre un joc web del curs de Front End Developer del projecte Singulars 2020, dirigit per PIMEC i impartit per BitAcademy.
 
